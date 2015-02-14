@@ -133,7 +133,7 @@ http://www.clearclouds.com/upload/iProbe-VM-1.0-20150205.zip
 
 ###Here attached a sample for editing the cfg-file.
 
-#================================================#
+#================#
 
 DEVICE=eth0
 
@@ -157,7 +157,7 @@ UUID=f9a0578b-39c9-456b-b225-***
 
 ONBOOT=yes
 
-#================================================#
+#====================#
 
 Note: This interface works as both network-serve and traffic capturing ports. However, you can configure an extra port for traffic capturing as well.
 
@@ -178,7 +178,7 @@ Note: This interface works as both network-serve and traffic capturing ports. Ho
 
 6.3.4. 1. vim /etc/ntp.conf
 
-======================================================================
+=======================
 
 #server 0.centos.pool.ntp.org
 
@@ -190,7 +190,7 @@ restrict  192.168.100.254
 
 server 192.168.100.254     (e.g.)
 
-======================================================================
+=============================
 
 6.3.4. 2. /etc/init.d/ntpd start
 
@@ -228,7 +228,7 @@ Tel: 408-883-5418
 
 Email: info@clearclouds.com
 
-============================================================
+=================
 
 7. Install fetcher.zip
 
