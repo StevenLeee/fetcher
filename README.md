@@ -1,9 +1,8 @@
 Clearclouds fetcher plugin
+
 1. The fetcher plugin published and supported by Clearclouds team
 
-2. The fetcher plugin enables integrated monitoring of your Local Traffic Manager devices 
-
-inside of New Relic.
+2. The fetcher plugin enables integrated monitoring of your Local Traffic Manager devices inside of New Relic.
 
 3. The fetcher plugin monitor items include:
 
