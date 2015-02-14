@@ -1,277 +1,278 @@
-	Clearclouds fetcher plugin
-	The fetcher plugin published and supported by Clearclouds team
+Clearclouds fetcher plugin
+1. The fetcher plugin published and supported by Clearclouds team
 
-	The fetcher plugin enables integrated monitoring of your Local Traffic Manager devices 
+2. The fetcher plugin enables integrated monitoring of your Local Traffic Manager devices 
 
-	inside of New Relic.
+inside of New Relic.
 
-	The fetcher plugin monitor items include:
+3. The fetcher plugin monitor items include:
 
-	TCP
+3.1 . TCP
 
-	Throughput: Total, Client side, Server side, Inbound and Outbound
+3.1.1. Throughput: Total, Client side, Server side, Inbound and Outbound
 
-	Latency: Client side, Server side
+3.1.2. Latency: Client side, Server side
 
-	CloseStatus: FIN, TIMEOUT, RESET
+3.1.3 CloseStatus: FIN, TIMEOUT, RESET
 
-	New/Close connection : Requests per second
+3.1.4. New/Close connection : Requests per second
 
-	Retransmited Rate
+3.1.5. Retransmited Rate
 
-	Attack: Syn, Scan
+3.1.6. Attack: Syn, Scan
 
-	Http
+3.2. Http
 
-	Throughput : Total, Client side, Server side, Inbound and Outbound
+3.2. 1. Throughput : Total, Client side, Server side, Inbound and Outbound
 
-	Latency: Client side, Server side
+3.2. 2. Latency: Client side, Server side
 
-	StateCode:3XX,4XX,5XX
+3.2. 3. StateCode:3XX,4XX,5XX
 
-	Error Rate
+3.2. 4. Error Rate
 
-	Apdex: user satisfied degree
+3.2. 5. Apdex: user satisfied degree
 
-	Transaction
+3.3. Transaction
 
-	Avg response time
+3.3.1. Avg response time
 
-	Error Rate
+3.3.2. Error Rate
 
-	Apdex : user satisfied degree
+3.3.3. Apdex : user satisfied degree
 
-	Alert
+3.4. Alert
 
-	Include most 5 alerting items about above all items, each alerting item have caution threshold and critical threshold, when the item value more than Caution threshold, new relic platform raise a caution alerting in GUI, and when the item value more than critical threshold, new relic platform raise a critical alerting in GUI.
+	Include most 5 alerting items about above all items, each alerting item have caution threshold and critical threshold, when the item value more than Caution threshold, new relic platform raise a caution alerting in GUI, and when the item value more than critical threshold, new relic platform raise a critical alerting in GUI.
 
-	Alerting frequency is once per 30 minute.
+	Alerting frequency is once per 30 minute.
 
-	New relic platform will send you a email when alert, if you configure this function.
+	New relic platform will send you a email when alert, if you configure this function.
 
 
-	Requirement
+4. Requirement
 
-	OS : CentOS6.2 64Bits or later
+4.1. OS : CentOS6.2 64Bits or later
 
-	Disk : more than 50G
+4.2. Disk : more than 50G
 
-	Memory : more than 1G
+4.3. Memory : more than 1G
 
-	Software : Python 2.6 or later
-	cx_freeze-4.3.3 or later
+4.4. Software : Python 2.6 or later
+cx_freeze-4.3.3 or later
 
-	iProbe.zip download URL : 
+5. Download URL
 
-	http://www.clearclouds.com/upload/iProbe-VM-1.0-20150205.zip
+5.1.  iProbe.zip: 
+http://www.clearclouds.com/upload/iProbe-VM-1.0-20150205.zip
 
-	About URL : http://www.clearclouds.com/about/
+5.2. About URL : http://www.clearclouds.com/about/
 
-	Surport URL : http://www.clearclouds.com/service/
+5.3. Surport URL : http://www.clearclouds.com/service/
 
-	fetcher Download  URL:  https://github.com/StevenLeee/fetcher.git
+5.4. fetcher Download  URL:  https://github.com/StevenLeee/fetcher.git
 
-	How to Install iProbe in Virtual Machine Environment
+6. How to Install iProbe in Virtual Machine Environment
 
-	This document describes how to install iProbe in Virtual Machine (VM) environment. The released iso file includes both Linux OS and iProbe system.
+	This document describes how to install iProbe in Virtual Machine (VM) environment. The released iso file includes both Linux OS and iProbe system.
 
-	We recommend installing the system on Oracle Virtual Box and VMware Player.
+	We recommend installing the system on Oracle Virtual Box and VMware Player.
 
-	Requirements.
+6.1. Requirements.
 
-	OS
+6.1.1. OS
 
-	Recommended OS is "Red Hat/Centos 6.x(64 bit) Linux", 6.4 is preferred.
+	Recommended OS is "Red Hat/Centos 6.x(64 bit) Linux", 6.4 is preferred.
 
-	Hardware
+6.1.2. Hardware
 
-	Hard disk        at least 50GB
+	Hard disk        at least 50GB
 
-	Memory           no less then 1GB
+	Memory           no less then 1GB
 
-	CPU cores        1 or 2
+	CPU cores        1 or 2
 
 
 
-	Installing P-100
+6.2. Installing P-100
 
-	VM time zone settings
+6.2. 1. VM time zone settings
 
-	The time zone is "UTC".
+	The time zone is "UTC".
 
-	Configure NIC
+6.2. 2. Configure NIC
 
-	Choose one NIC then set the "Bridged Adapter" mode.
+	Choose one NIC then set the "Bridged Adapter" mode.
 
-	Set NIC running in a promiscuous mode and choose "allow both".
+	Set NIC running in a promiscuous mode and choose "allow both".
 
 
-	Set boot device
+6.2. 3. Set boot device
 
-	Choose the CD/DVD as the default boot device.
+	Choose the CD/DVD as the default boot device.
 
-	Mount ISO file.
+6.2. 4. Mount ISO file.
 
-	Configure the IDE controller, add ISO file to the list. (file name: iProbe-VM-xxxx.iso)
+	Configure the IDE controller, add ISO file to the list. (file name: iProbe-VM-xxxx.iso)
 
-	Install the system
+6.2. 5. Install the system
 
-	The VM will install the Linux OS including iProbe system automatically.
+	The VM will install the Linux OS including iProbe system automatically.
 
 
-	Configure iProbe system
+6.3. Configure iProbe system
 
-	Logging on system
+6.3.1. Logging on system
 
-	Logging on the system as root with the password "pProbejy"
+	Logging on the system as root with the password "pProbejy"
 
-	Set an IP for your system
+6.3.2. Set an IP for your system
 
-	You may follow the command below:
+	You may follow the command below:
 
-	vim /etc/sysconfig/network-scripts/ifcfg-ethX  (where X represents the network interface)
+6.3.2.1. vim /etc/sysconfig/network-scripts/ifcfg-ethX  (where X represents the network interface)
 
-	###Here attached a sample for editing the cfg-file.
+###Here attached a sample for editing the cfg-file.
 
-	#================================================#
+#================================================#
 
-	DEVICE=eth0
+DEVICE=eth0
 
-	HWADDR=68:05:CA:**:**:**
+HWADDR=68:05:CA:**:**:**
 
-	TYPE=Ethernet
+TYPE=Ethernet
 
-	BOOTPROTO=static
+BOOTPROTO=static
 
-	IPADDR=192.168.10.228
+IPADDR=192.168.10.228
 
-	GATEWAY=192.168.10.1
+GATEWAY=192.168.10.1
 
-	DNS1=8.8.8.8
+DNS1=8.8.8.8
 
-	IPV4_FAILURE_FATAL=yes
+IPV4_FAILURE_FATAL=yes
 
-	IPV6INIT=no
+IPV6INIT=no
 
-	UUID=f9a0578b-39c9-456b-b225-***
+UUID=f9a0578b-39c9-456b-b225-***
 
-	ONBOOT=yes
+ONBOOT=yes
 
-	#================================================#
+#================================================#
 
-	Note: This interface works as both network-serve and traffic capturing ports. However, you can configure an extra port for traffic capturing as well.
+Note: This interface works as both network-serve and traffic capturing ports. However, you can configure an extra port for traffic capturing as well.
 
-	service network restart
+6.3.2.2. service network restart
 
-	Configure time zone settings (optional)
+6.3.3. Configure time zone settings (optional)
 
-	Follow the commands below to change your system's timezone setting if you have to do.
+	Follow the commands below to change your system's timezone setting if you have to do.
 
 
-	cp /usr/share/zoneinfo/America/Los_Angeles /ect/localtime (take Los_Angeles for instance)
+6.3.3.1. cp /usr/share/zoneinfo/America/Los_Angeles /ect/localtime (take Los_Angeles for instance)
 
-	sed -i s/PRC/America\/Los_Angeles/g” /usr/local/php/etc/php.ini
+6.3.3.2. sed -i s/PRC/America\/Los_Angeles/g” /usr/local/php/etc/php.ini
 
-	hwclock –w
+6.3.3.3. hwclock –w
 
-	Verify NTP Daemon Operation for Network Data Collection
+6.3.4. Verify NTP Daemon Operation for Network Data Collection
 
-	vim /etc/ntp.conf
+6.3.4. 1. vim /etc/ntp.conf
 
-	======================================================================
+======================================================================
 
-	#server 0.centos.pool.ntp.org
+#server 0.centos.pool.ntp.org
 
-	#server 1.centos.pool.ntp.org
+#server 1.centos.pool.ntp.org
 
-	#server 2.centos.pool.ntp.org
+#server 2.centos.pool.ntp.org
 
-	restrict  192.168.100.254
+restrict  192.168.100.254
 
-	server 192.168.100.254     (e.g.)
+server 192.168.100.254     (e.g.)
 
-	======================================================================
+======================================================================
 
-	/etc/init.d/ntpd start
+6.3.4. 2. /etc/init.d/ntpd start
 
-	chkconfig ntpd on
+6.3.4. 3. chkconfig ntpd on
 
-	Restart the iprobe system
+6.3.5. Restart the iprobe system
 
-	service pprobe restart
+	service pprobe restart
 
 
-	Log on the GUI console
+6.4. Log on the GUI console
 
-	Open your browser and import the URL.(http://192.168.10.228) The URL depends on the IP of your has been configured above.
+6.4.1. Open your browser and import the URL.(http://192.168.10.228) The URL depends on the IP of your has been configured above.
 
-	Enter the configuration menu and start or shutdown the monitor engine.
+6.4.2. Enter the configuration menu and start or shutdown the monitor engine.
 
-	(Config->Monitor Engine,click start or stop button)
+(Config->Monitor Engine,click start or stop button)
 
 
-	Notes:
+6.5. Notes:
 
-	The system will listen to the eth0 port by default. You can customize the listened port by modifying the pprobe.cfg file (/usr/local/etc/pprobe.cfg) and change the value of interface. (["eth1"] e.g.)
+The system will listen to the eth0 port by default. You can customize the listened port by modifying the pprobe.cfg file (/usr/local/etc/pprobe.cfg) and change the value of interface. (["eth1"] e.g.)
 
-	Please separate the different ports by a comma when you need to listen to more ports.(["eth0","eth1"] e.g.)
+Please separate the different ports by a comma when you need to listen to more ports.(["eth0","eth1"] e.g.)
 
-	If you have any question,please contact us.
+If you have any question,please contact us.
 
-	===========================================================
+===========================================================
 
-	Silicon Valley Office
+Silicon Valley Office
 
-	1601 McCarthy Blvd, Milpitas, CA 95035
+1601 McCarthy Blvd, Milpitas, CA 95035
 
-	Tel: 408-883-5418
+Tel: 408-883-5418
 
-	Email: info@clearclouds.com
+Email: info@clearclouds.com
 
-	============================================================
+============================================================
 
-	Install fetcher.zip
+7. Install fetcher.zip
 
-	after download the file fetcher.zip from https://github.com/StevenLeee/fetcher.git
+7.1. after download the file fetcher.zip from https://github.com/StevenLeee/fetcher.git
 
-	enter download directory
+7.2. enter download directory
 
-	unzip  fetcher.zip
+7.3. unzip  fetcher.zip
 
-	cd fetcher
+7.4. cd fetcher
 
-	chmod -R 777  ./*
+7.5. chmod -R 777  ./*
 
-	python setup.py install
+7.6. python setup.py install
 
-	configuration
+8. configuration
 
-	run fetcher only once:
+run fetcher only once:
 
-	fetcher  -d datadir  -n pluginid  -k newrelickey
+fetcher  -d datadir  -n pluginid  -k newrelickey
 
-	here :
+here :
 
-	datadir  :  your data directory
+datadir  :  your data directory
 
-	pluginid  :  your plugin name, generally server name
+pluginid  :  your plugin name, generally server name
 
-	newrelickey  :  your license key from your New Relic account.
+newrelickey  :  your license key from your New Relic account.
 
-	e.g :
+e.g :
 
-	fetcher -d /home/juyun/datafile  -n ClearClouds -k 19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
+fetcher -d /home/juyun/datafile  -n ClearClouds -k 19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
 
-	until print message as below:
+until print message as below:
 
-	datadir= home/juyun/datafile
+datadir= home/juyun/datafile
 
-	pluginid= ClearClouds
+pluginid= ClearClouds
 
-	newrelickey=19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
+newrelickey=19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
 
 
-	Execute fetcher
+9. Execute fetcher
 
-	fetcher -r
+fetcher -r
 
