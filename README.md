@@ -1,272 +1,322 @@
+
 Clearclouds fetcher plugin
 
-1. The fetcher plugin published and supported by Clearclouds team
+1           The fetcher plugin published and supported by Clearclouds team
 
-2. The fetcher plugin enables integrated monitoring of your Local Traffic Manager devices inside of New Relic.
+2           The fetcher plugin enables integrated monitoring of your Local Traffic Manager devices inside of New Relic.
 
-3. The fetcher plugin monitor items include:
+3           The fetcher plugin monitor items include:
 
-3.1 . TCP
+3.1          TCP
 
-3.1.1. Throughput: Total, Client side, Server side, Inbound and Outbound
+3.1.1     Throughput: Total, Client side, Server side, Inbound and Outbound
 
-3.1.2. Latency: Client side, Server side
+3.1.2     Latency: Client side, Server side
 
-3.1.3 CloseStatus: FIN, TIMEOUT, RESET
+3.1.3     CloseStatus: FIN, TIMEOUT, RESET
 
-3.1.4. New/Close connection : Requests per second
+3.1.4     New/Close connection : Requests per second
 
-3.1.5. Retransmited Rate
+3.1.5     Retransmited Rate
 
-3.1.6. Attack: Syn, Scan
+3.1.6     Attack: Syn, Scan
 
-3.2. Http
+3.2          Http 
 
-3.2. 1. Throughput : Total, Client side, Server side, Inbound and Outbound
+3.2.1     Throughput : Total, Client side, Server side, Inbound and Outbound
 
-3.2. 2. Latency: Client side, Server side
+3.2.2     Latency: Client side, Server side
 
-3.2. 3. StateCode:3XX,4XX,5XX
+3.2.3     StateCode:3XX,4XX,5XX
 
-3.2. 4. Error Rate
+3.2.4     Error Rate
 
-3.2. 5. Apdex: user satisfied degree
+3.2.5     Apdex: user satisfied degree
 
-3.3. Transaction
+3.3          Transaction
 
-3.3.1. Avg response time
+3.3.1     Avg response time
 
-3.3.2. Error Rate
+3.3.2     Error Rate
 
-3.3.3. Apdex : user satisfied degree
+3.3.3     Apdex : user satisfied degree
 
-3.4. Alert
+3.4          Alert
 
-	Include most 5 alerting items about above all items, each alerting item have caution threshold and critical threshold, when the item value more than Caution threshold, new relic platform raise a caution alerting in GUI, and when the item value more than critical threshold, new relic platform raise a critical alerting in GUI.
+         Include most 5 alerting items about above all items, each alerting item have caution threshold and critical threshold, when the item value more than Caution threshold, new relic platform raise a caution alerting in GUI, and when the item value more than critical threshold, new relic platform raise a critical alerting in GUI.
 
-	Alerting frequency is once per 30 minute.
+         Alerting frequency is once per 30 minute.
 
-	New relic platform will send you a email when alert, if you configure this function.
+         New relic platform will send you a email when alert, if you configure this function.
 
+ 
 
-4. Requirement
+ 
 
-4.1. OS : CentOS6.2 64Bits or later
+4           Requirement
 
-4.2. Disk : more than 50G
+         OS : CentOS6.2 64Bits or later
 
-4.3. Memory : more than 1G
+         Disk : more than 50G
 
-4.4. Software : Python 2.6 or later
-cx_freeze-4.3.3 or later
+         Memory : more than 1G
 
-5. Download URL
+         Software : Python 2.6 or later
 
-5.1.  iProbe.zip: 
-http://www.clearclouds.com/upload/iProbe-VM-1.0-20150205.zip
+                             cx_freeze-4.3.3 or later
 
-5.2. About URL : http://www.clearclouds.com/about/
+ 
 
-5.3. Surport URL : http://www.clearclouds.com/service/
+5           iProbe.zip download URL : http://www.clearclouds.com/upload/iProbe-VM-1.0-20150205.zip
 
-5.4. fetcher Download  URL:  https://github.com/StevenLeee/fetcher.git
+6           About URL : http://www.clearclouds.com/about/
 
-6. How to Install iProbe in Virtual Machine Environment
+7           Surport URL : http://www.clearclouds.com/service/
 
-	This document describes how to install iProbe in Virtual Machine (VM) environment. The released iso file includes both Linux OS and iProbe system.
+8           fetcher Download  URL:  https://github.com/StevenLeee/fetcher.git
 
-	We recommend installing the system on Oracle Virtual Box and VMware Player.
+9           How to Install iProbe in Virtual Machine Environment
 
-6.1. Requirements.
+         This document describes how to install iProbe in Virtual Machine (VM) environment. The released iso file includes both Linux OS and iProbe system.
 
-6.1.1. OS
+         We recommend installing the system on Oracle Virtual Box and VMware Player.
 
-	Recommended OS is "Red Hat/Centos 6.x(64 bit) Linux", 6.4 is preferred.
+9.1          Requirements.
 
-6.1.2. Hardware
+9.1.1     OS 
 
-	Hard disk        at least 50GB
+                        Recommended OS is "Red Hat/Centos 6.x(64 bit) Linux", 6.4 is preferred. 
 
-	Memory           no less then 1GB
+ 
 
-	CPU cores        1 or 2
+9.1.2     Hardware      
 
+                        Hard disk        at least 50GB 
 
+                        Memory           no less then 1GB
 
-6.2. Installing P-100
+                        CPU cores        1 or 2
 
-6.2. 1. VM time zone settings
+   
 
-	The time zone is "UTC".
+ 
 
-6.2. 2. Configure NIC
+9.2          Installing P-100 
 
-	Choose one NIC then set the "Bridged Adapter" mode.
+ 
 
-	Set NIC running in a promiscuous mode and choose "allow both".
+9.2.1     VM time zone settings
 
+  The time zone is "UTC".
 
-6.2. 3. Set boot device
+9.2.2     Configure NIC
 
-	Choose the CD/DVD as the default boot device.
+  Choose one NIC then set the "Bridged Adapter" mode.
 
-6.2. 4. Mount ISO file.
+  Set NIC running in a promiscuous mode and choose "allow both".
 
-	Configure the IDE controller, add ISO file to the list. (file name: iProbe-VM-xxxx.iso)
+ 
 
-6.2. 5. Install the system
+9.2.3     Set boot device
 
-	The VM will install the Linux OS including iProbe system automatically.
+  Choose the CD/DVD as the default boot device.
 
+ 
 
-6.3. Configure iProbe system
+9.2.4     Mount ISO file.
 
-6.3.1. Logging on system
+   Configure the IDE controller, add ISO file to the list. (file name: iProbe-VM-xxxx.iso)
 
-	Logging on the system as root with the password "pProbejy"
+   
 
-6.3.2. Set an IP for your system
+9.2.5     Install the system
 
-	You may follow the command below:
+  The VM will install the Linux OS including iProbe system automatically.
 
-6.3.2.1. vim /etc/sysconfig/network-scripts/ifcfg-ethX  (where X represents the network interface)
+ 
 
-###Here attached a sample for editing the cfg-file.
+  
 
-#================#
+9.3          Configure iProbe system
 
-DEVICE=eth0
+9.3.1     Logging on system
 
-HWADDR=68:05:CA:**:**:**
+  Logging on the system as root with the password "pProbejy" 
 
-TYPE=Ethernet
+  
 
-BOOTPROTO=static
+9.3.2     Set an IP for your system
 
-IPADDR=192.168.10.228
+  You may follow the command below:
 
-GATEWAY=192.168.10.1
+  
 
-DNS1=8.8.8.8
+  a) vim /etc/sysconfig/network-scripts/ifcfg-ethX  (where X represents the network interface)
 
-IPV4_FAILURE_FATAL=yes
+  
 
-IPV6INIT=no
+  ###Here attached a sample for editing the cfg-file.
 
-UUID=f9a0578b-39c9-456b-b225-***
+  #=================#
 
-ONBOOT=yes
+    DEVICE=eth0
 
-#====================#
+    HWADDR=68:05:CA:**:**:**
 
-Note: This interface works as both network-serve and traffic capturing ports. However, you can configure an extra port for traffic capturing as well.
+    TYPE=Ethernet
 
-6.3.2.2. service network restart
+    BOOTPROTO=static
 
-6.3.3. Configure time zone settings (optional)
+    IPADDR=192.168.10.228   
 
-	Follow the commands below to change your system's timezone setting if you have to do.
+    GATEWAY=192.168.10.1
 
+    DNS1=8.8.8.8
 
-6.3.3.1. cp /usr/share/zoneinfo/America/Los_Angeles /ect/localtime (take Los_Angeles for instance)
+    IPV4_FAILURE_FATAL=yes
 
-6.3.3.2. sed -i s/PRC/America\/Los_Angeles/g” /usr/local/php/etc/php.ini
+    IPV6INIT=no
 
-6.3.3.3. hwclock –w
+    UUID=f9a0578b-39c9-456b-b225-***
 
-6.3.4. Verify NTP Daemon Operation for Network Data Collection
+    ONBOOT=yes
 
-6.3.4. 1. vim /etc/ntp.conf
+  #==================#
 
-=======================
+     Note: This interface works as both network-serve and traffic capturing ports. However, you can configure an extra port for traffic capturing as well.
 
-#server 0.centos.pool.ntp.org
+    
 
-#server 1.centos.pool.ntp.org
+    b) service network restart
 
-#server 2.centos.pool.ntp.org
+    
 
-restrict  192.168.100.254
+9.3.3     Configure time zone settings (optional)
 
-server 192.168.100.254     (e.g.)
+   Follow the commands below to change your system's timezone setting if you have to do.
 
-=============================
+   
 
-6.3.4. 2. /etc/init.d/ntpd start
+  a) cp /usr/share/zoneinfo/America/Los_Angeles /ect/localtime (take Los_Angeles for instance)
 
-6.3.4. 3. chkconfig ntpd on
+  b) sed -i s/PRC/America\/Los_Angeles/g” /usr/local/php/etc/php.ini
 
-6.3.5. Restart the iprobe system
+  c) hwclock –w
 
-	service pprobe restart
+  
 
+9.3.4     Verify NTP Daemon Operation for Network Data Collection
 
-6.4. Log on the GUI console
+   a) vim /etc/ntp.conf
 
-6.4.1. Open your browser and import the URL.(http://192.168.10.228) The URL depends on the IP of your has been configured above.
+ =================
 
-6.4.2. Enter the configuration menu and start or shutdown the monitor engine.
+  #server 0.centos.pool.ntp.org
 
-(Config->Monitor Engine,click start or stop button)
+  #server 1.centos.pool.ntp.org
 
+  #server 2.centos.pool.ntp.org
 
-6.5. Notes:
+  restrict  192.168.100.254  
 
-The system will listen to the eth0 port by default. You can customize the listened port by modifying the pprobe.cfg file (/usr/local/etc/pprobe.cfg) and change the value of interface. (["eth1"] e.g.)
+  server 192.168.100.254     (e.g.)
 
-Please separate the different ports by a comma when you need to listen to more ports.(["eth0","eth1"] e.g.)
+ ==============
 
-If you have any question,please contact us.
+   b) /etc/init.d/ntpd start
 
+   c) chkconfig ntpd on
 
-7. Install fetcher.zip
+  
 
-7.1. after download the file fetcher.zip from https://github.com/StevenLeee/fetcher.git
+9.3.5     Restart the iprobe system
 
-7.2. enter download directory
+  service pprobe restart
 
-7.3. unzip  fetcher.zip
+  
 
-7.4. cd fetcher
+ 
 
-7.5. chmod -R 777  ./*
+9.3.6     Log on the GUI console
 
-7.6. python setup.py install
+9.3.6.1    Open your browser and import the URL.(http://192.168.10.228) The URL depends on the IP of your
 
-8. configuration
+                            has been configured above.
 
-run fetcher only once:
+9.3.6.2    Enter the configuration menu and start or shutdown the monitor engine.
 
-fetcher  -d datadir  -n pluginid  -k newrelickey
+ (Config->Monitor Engine,click start or stop button) 
 
-here :
+ 
 
-datadir  :  your data directory
+9.3.7     Notes:
 
-pluginid  :  your plugin name, generally server name
+         The system will listen to the eth0 port by default. You can customize the listened port by modifying the pprobe.cfg file (/usr/local/etc/pprobe.cfg) and change the value of interface. (["eth1"] e.g.)
 
-newrelickey  :  your license key from your New Relic account.
+ 
 
-e.g :
+         Please separate the different ports by a comma when you need to listen to more ports.(["eth0","eth1"] e.g.)
 
-fetcher -d /home/juyun/datafile  -n ClearClouds -k 19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
+ 
 
-until print message as below:
+         If you have any question,please contact us.
 
-datadir= home/juyun/datafile
+====================
 
-pluginid= ClearClouds
+Silicon Valley Office                  
 
-newrelickey=19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
+1601 McCarthy Blvd, Milpitas, CA 95035 
 
+Tel: 408-883-5418                      
 
-9. Execute fetcher
+Email: info@clearclouds.com            
 
-fetcher -r
+====================
 
-<a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" class="pf" class="">设置</a>
+ 
 
-<
+10          Install fetcher.zip
 
+10.1       after download the file fetcher.zip from https://github.com/StevenLeee/fetcher.git
 
+10.2       enter download directory
 
+10.3       unzip  fetcher.zip
+
+10.4       cd fetcher
+
+10.5       chmod -R 777  ./*
+
+10.6       python setup.py install
+
+11       configuration
+
+11.1       run fetcher only once:
+
+                  fetcher  -d datadir  -n pluginid  -k newrelickey
+
+                   here :
+
+                  datadir  :  your data directory
+
+                  pluginid  :  your plugin name, generally server name
+
+                  newrelickey  :  your license key from your New Relic account.
+
+11.2       e.g :
+
+                  fetcher -d /home/juyun/datafile  -n ClearClouds -k 19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
+
+         until print message as below:
+
+                  datadir= home/juyun/datafile
+
+                  pluginid= ClearClouds
+
+                  newrelickey=19e5cb7a2ec9c43a7a90cec3360fb7b5868d08d6
+
+ 
+
+12       Execute fetcher
+
+         fetcher -r
