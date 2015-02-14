@@ -218,17 +218,6 @@ Please separate the different ports by a comma when you need to listen to more p
 
 If you have any question,please contact us.
 
-===========================================================
-
-Silicon Valley Office
-
-1601 McCarthy Blvd, Milpitas, CA 95035
-
-Tel: 408-883-5418
-
-Email: info@clearclouds.com
-
-=================
 
 7. Install fetcher.zip
 
